@@ -1,0 +1,75 @@
+/****
+
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+type geometry interface {
+	area() float64
+	perim() float64
+}
+
+type circle struct {
+	radius float64
+}
+
+/*
+type rect struct {
+	width  float64
+	height float64
+}
+*/
+/*
+func (r rect) area() float64 {
+	return r.width * r.height
+}
+*/
+func (c *circle) area() float64 {
+	return math.Pi * c.radius * c.radius
+}
+
+/*
+func (r rect) perim() float64 {
+	return 2*r.width + 2*r.height
+}
+*/
+
+func (c *circle) perim() float64 {
+	return 2 * math.Pi * c.radius
+}
+
+type calculateshape struct {
+	geometry
+}
+
+func (s *calculateshape) calculateShapes() {
+	fmt.Println(s.area())
+
+	fmt.Println(s.perim())
+}
+
+func main() {
+	c1 := circle{4.5}
+	//r1 := rect{5, 7}
+
+	shapes := []geometry{&c1}
+
+	fmt.Println(c1.area())
+	//fmt.Println(r1.area())
+
+	cal := calculateshape{&c1}
+
+	cal.calculateShapes()
+
+	fmt.Println(shapes[0].area())
+	fmt.Println(shapes[0].perim())
+
+	//for _, shape := range shapes {
+	//fmt.Println("my function getArea() ", getArea(&shape))
+	//}
+
+}
+******/
